@@ -63,7 +63,7 @@ input[type="text"]{
 }
 
 .btn-grad {
-    background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%);
+    background-image: linear-gradient(to right, #4b6cb7 0%, #182848  51%, #4b6cb7  100%);
    text-transform: uppercase;
    transition: 0.5s;
    background-size: 200% auto;
@@ -102,7 +102,7 @@ input[type="text"]{
   }
 
   h3, h4{
-     background: linear-gradient(to left, #11998e, #38ef7d);
+     background: linear-gradient(to right, #56ccf2, #2f80ed);;
      background-size: 100%;
      background-repeat: repeat;
      -webkit-background-clip: text;
@@ -111,3 +111,25 @@ input[type="text"]{
     -moz-text-fill-color: transparent;
     margin: 10px 0px;
   }
+
+  .btn-grad-2 {
+    background-image: linear-gradient(to right, #e53935 0%, #e35d5b  51%, #e53935  100%);
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   border: none;
+   outline: none;
+   cursor: pointer;
+   margin-top: 40px;
+   width: 120px;
+   height: 40px;
+   border-radius: 8px;
+ }
+
+ .btn-grad-2:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+ }
+
+ 
