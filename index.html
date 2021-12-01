@@ -15,7 +15,7 @@
       <form action="">
           <h1 class="gradient-text">Mr. or Ms.?</h1>
           <label for="name">Name</label>
-          <input type="text" id="name">
+          <input type="text" id="name" maxlength="255">
           
         <div>
             <input type="radio" id="male" name="gender" value="male">
@@ -26,17 +26,19 @@
             <label for="female">female</label>
         </div>
 
-        <button type="button" class="btn-grad">submit</button>
+        <button id="submit" type="button" class="btn-grad">submit</button>
+        <button id="save" type="button" class="btn-grad">Save</button>
             
       </form>
       <div class="prediction-container">
           <h2 class="gradient-text">prediction</h2>
-          <h3>Male</h3>
-          <h4>97%</h4>
+          <h3 id="gender-ans">...</h3>
+          <h4 id="gender-persent">...</h4>
           <h2 class="gradient-text">Saved Answer</h2>
-          <h3>Male</h3>
-          <button class="btn-grad-2">Clear</button>
+          <h3 id="saved">...</h3>
+          <button class="btn-grad-2" id="clear">Clear</button>
       </div>  
     </section>
+    <script src="main.js"></script>
 </body>
 </html>
