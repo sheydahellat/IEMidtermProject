@@ -7,7 +7,9 @@ html{
     overflow: hidden;
 }
 
-
+/*  Add background image and set the container div. 
+    - flex box is in center horizontally and vertically.
+    - background image covers the entire browser window */
 body{
     height: 100%;
     margin: 0px;
@@ -20,6 +22,7 @@ body{
     justify-content: center;
 }
 
+
 h3, h4{
     background: linear-gradient(to right, #56ccf2, #2f80ed);;
     background-size: 100%;
@@ -31,12 +34,13 @@ h3, h4{
    margin: 10px 0px;
  }
 
+ /*  In this section, we used flex  to arrange the elements and we make it blur. 
+   */
 section{
     display: flex;
     flex-direction: row;
     flex-basis: 50%;
     min-height: 400px;
-    /* background-color: white; */
     background-color: rgba(0,0,0, 0.4);
     margin: auto;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -74,6 +78,8 @@ input[type="text"]{
     margin-bottom: 30px;
 }
 
+/*css class for submit and save button
+the button is blue and has effect on hover event*/
 .btn-grad {
     background-image: linear-gradient(to right, #4b6cb7 0%, #182848  51%, #4b6cb7  100%);
    text-transform: uppercase;
@@ -94,19 +100,17 @@ input[type="text"]{
    color: #fff;
  }
 
+  /* Use the text as a mask for the background. 
+     This will show the gradient as a text color rather than element bg. 
+      Set the background size and repeat properties. */
  .gradient-text {
-    /* Fallback: Set a background color. */
     background-color: red;
-    
-    /* Create the gradient. */
     background-image: linear-gradient(45deg, #f3ec78, #af4261);
     
-    /* Set the background size and repeat properties. */
+   
     background-size: 100%;
     background-repeat: repeat;
-  
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
+   
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-background-clip: text;
@@ -114,7 +118,8 @@ input[type="text"]{
   }
 
   
-
+/*css class for clear button
+the button is red and has effect on hover event*/
   .btn-grad-2 {
     background-image: linear-gradient(to right, #e53935 0%, #e35d5b  51%, #e53935  100%);
    text-transform: uppercase;

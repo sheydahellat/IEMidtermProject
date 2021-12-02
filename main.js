@@ -14,7 +14,7 @@ const clearBtn = document.getElementById('clear');
 let currentValue;
 
 
-
+// handling submit button and send request to genderize.io site and show the result .if the result is null it shows notfound 
 
 document.getElementById('submit').addEventListener('click', () => {
     let input = document.getElementById('name').value;
@@ -24,16 +24,16 @@ document.getElementById('submit').addEventListener('click', () => {
         answer.innerHTML = data.gender == null ?  "NotFound" : data.gender;
         persent.innerHTML = data.probability;
       });
-    //   if(data.gender == null){
-    //     answer.innerHTML = "notFound";
-    //     persent.innerHTML = "0";
-    //   }
       if(localStorage.getItem(input)){
           savedAnswer.innerHTML = localStorage.getItem(input);
+      }
+      else{
+        savedAnswer.innerHTML = "..."
       }
 });
 
 
+// handling save button and save the choosen button and input vlaue in local storage.if no option is chose the oredicate witll be save
 
 
 saveBtn.addEventListener('click', () => {
@@ -48,7 +48,7 @@ saveBtn.addEventListener('click', () => {
 });
 
 
-
+//clear the value that is saved for current input
 clearBtn.addEventListener('click', () => {
     localStorage.removeItem(currentValue)
     savedAnswer.innerHTML = '...';
