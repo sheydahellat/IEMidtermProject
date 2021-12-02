@@ -24,7 +24,7 @@ document.getElementById('submit').addEventListener('click', () => {
         answer.innerHTML = data.gender == null ?  "NotFound" : data.gender;
         persent.innerHTML = data.probability;
       });
-      if(localStorage.getItem(input)){
+      if(localStorage.getItem(input)){ 
           savedAnswer.innerHTML = localStorage.getItem(input);
       }
       else{
@@ -42,7 +42,8 @@ saveBtn.addEventListener('click', () => {
     if(male_choice.checked || female_choice.checked){
         localStorage.setItem(input, document.querySelector('input[name="gender"]:checked').value);
     }
-    else{
+    else if(answer.innerHTML != "NotFound")
+    {
         localStorage.setItem(input, answer.innerHTML);
     }
 });
