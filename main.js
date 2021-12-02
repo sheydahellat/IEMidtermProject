@@ -21,9 +21,13 @@ document.getElementById('submit').addEventListener('click', () => {
     currentValue = input;
     fetch(`https://api.genderize.io/?name=${input}`).then(response => response.json())
     .then(data => {
-        answer.innerHTML = data.gender;
+        answer.innerHTML = data.gender == null ?  "NotFound" : data.gender;
         persent.innerHTML = data.probability;
       });
+    //   if(data.gender == null){
+    //     answer.innerHTML = "notFound";
+    //     persent.innerHTML = "0";
+    //   }
       if(localStorage.getItem(input)){
           savedAnswer.innerHTML = localStorage.getItem(input);
       }

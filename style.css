@@ -7,6 +7,7 @@ html{
     overflow: hidden;
 }
 
+
 body{
     height: 100%;
     margin: 0px;
@@ -18,6 +19,17 @@ body{
     align-content: center;
     justify-content: center;
 }
+
+h3, h4{
+    background: linear-gradient(to right, #56ccf2, #2f80ed);;
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent; 
+   -moz-background-clip: text;
+   -moz-text-fill-color: transparent;
+   margin: 10px 0px;
+ }
 
 section{
     display: flex;
@@ -101,16 +113,7 @@ input[type="text"]{
     -moz-text-fill-color: transparent;
   }
 
-  h3, h4{
-     background: linear-gradient(to right, #56ccf2, #2f80ed);;
-     background-size: 100%;
-     background-repeat: repeat;
-     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    margin: 10px 0px;
-  }
+  
 
   .btn-grad-2 {
     background-image: linear-gradient(to right, #e53935 0%, #e35d5b  51%, #e53935  100%);
